@@ -18,8 +18,8 @@ fun main(args: Array<String>) {
     }
 
     var reservoir = args[0]
-    for (i in 1..args.size) {
-        reservoir = args[randomNumber(i)]
+    for (i in 1 until args.size) {
+        reservoir = args[randomNumber(i+1)]
     }
 
     println(reservoir)
