@@ -72,9 +72,9 @@ class Karatsuba_multiplicationKtTest {
 
     @Test
     fun `should multiply 16 digits numbers`() {
-        val bigNumber1 = BigInteger("12345678")
-        val bigNumber2 = BigInteger("90123456")
-        val expected = BigInteger("1112635168023168")
+        val bigNumber1 = BigInteger("1234567890123456")
+        val bigNumber2 = BigInteger("7890123456780123")
+        val expected = BigInteger("9740893068850625727530716865088")
         val result = multiplyByKaratsuba(bigNumber1, bigNumber2)
         assertEquals(expected, result)
     }
