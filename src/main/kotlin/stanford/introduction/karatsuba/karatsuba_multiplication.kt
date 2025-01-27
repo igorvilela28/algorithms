@@ -2,13 +2,6 @@ package stanford.introduction.karatsuba
 
 import java.math.BigInteger
 
-fun main() {
-    println("Hello World")
-
-    val result = multiplyByKaratsuba(BigInteger.valueOf(1234), BigInteger.valueOf(5678))
-    println(result)
-}
-
 internal fun multiplyByKaratsuba(value1: BigInteger, value2: BigInteger): BigInteger {
 
     val s1 = value1.toString()
@@ -26,8 +19,6 @@ internal fun multiplyByKaratsuba(value1: BigInteger, value2: BigInteger): BigInt
     val d = uniformizedNumbers.second.splitInHalf().second.toBigInteger()
 
     val n = uniformizedNumbers.first.length
-
-    println("A: $a - B: $b - C: $c - D: $d")
 
     val p = a + b
     val q = c + d

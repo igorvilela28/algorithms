@@ -45,8 +45,11 @@ class Karatsuba_multiplicationKtTest {
     }
     @Test
     fun `should multiply 1234 times 5678`() {
-        val result = multiplyByKaratsuba(BigInteger.valueOf(1234), BigInteger.valueOf(5678))
-        assertEquals(BigInteger.valueOf(7006652), result)
+        val bigNumber1 = BigInteger("1234")
+        val bigNumber2 = BigInteger("5678")
+        val expected = BigInteger("7006652")
+        val result = multiplyByKaratsuba(bigNumber1, bigNumber2)
+        assertEquals(expected, result)
     }
 
     @Test
@@ -60,9 +63,9 @@ class Karatsuba_multiplicationKtTest {
 
     @Test
     fun `should multiply odd numbers - test case 02`() {
-        val bigNumber1 = BigInteger("229")
-        val bigNumber2 = BigInteger("3826")
-        val expected = BigInteger("876154")
+        val bigNumber1 = BigInteger("1234567")
+        val bigNumber2 = BigInteger("12345678")
+        val expected = BigInteger("15241566651426")
         val result = multiplyByKaratsuba(bigNumber1, bigNumber2)
         assertEquals(expected, result)
     }
