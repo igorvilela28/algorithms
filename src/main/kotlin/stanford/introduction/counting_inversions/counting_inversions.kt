@@ -3,39 +3,39 @@ package stanford.introduction.counting_inversions
 /**
  * Sorts A and return it and the number of inversions
  */
-internal fun countInversions(a: List<Int>): Pair<List<Int>, Int> {
+internal fun sortAndCountInversions(a: List<Int>): Pair<List<Int>, UInt> {
 
     // base case
     if (a.size <= 1) {
-        return a to 0
+        return a to 0u
     }
 
     if (a.size == 2) {
         val isInverted = a[0] > a[1]
-        return if (isInverted) a.reversed() to 1 else a to 0
+        return if (isInverted) a.reversed() to 1u else a to 0u
     }
 
-    val splitted = split(a)
-    val leftSide = splitted.first
-    val rightSide = splitted.second
+    val split = split(a)
+    val leftSide = split.first
+    val rightSide = split.second
 
-    val leftInversions = countInversions(leftSide)
-    val rightInversions = countInversions(rightSide)
-    val splittedInversions = mergeAndCountSpplited(leftSide, rightSide)
-    return splittedInversions.first to (leftInversions.second + rightInversions.second + splittedInversions.second)
+    val leftInversions = sortAndCountInversions(leftSide)
+    val rightInversions = sortAndCountInversions(rightSide)
+    val splitInversions = mergeAndCountSplit(leftInversions.first, rightInversions.first)
+    val total = leftInversions.second + rightInversions.second + splitInversions.second
+    return splitInversions.first to total
 }
 
 /**
  * merges 2 sorted arrays into one and counts the number of spplited inversions
  */
-internal fun mergeAndCountSpplited(sortedLeftSide: List<Int>, sortedRightSide: List<Int>): Pair<List<Int>, Int> {
+internal fun mergeAndCountSplit(sortedLeftSide: List<Int>, sortedRightSide: List<Int>): Pair<List<Int>, UInt> {
     var i = 0
     var j = 0
     val n = sortedLeftSide.size + sortedRightSide.size
-    var count = 0
+    var count = 0u
     val merged = mutableListOf<Int>()
     for (k in 0 until n) {
-
         if (i == sortedLeftSide.size) {
             merged.add(sortedRightSide[j])
             j++
@@ -48,7 +48,7 @@ internal fun mergeAndCountSpplited(sortedLeftSide: List<Int>, sortedRightSide: L
         } else {
             merged.add(sortedRightSide[j])
             j++
-            count += sortedLeftSide.size - i
+            count += (sortedLeftSide.size - i).toUInt()
         }
     }
     return merged to count
