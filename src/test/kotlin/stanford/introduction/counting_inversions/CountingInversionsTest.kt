@@ -24,7 +24,7 @@ class CountingInversionsTest {
     }
 
     @Test
-    fun `should merge and count splitted for even sorted arrays`() {
+    fun `should merge and count split for even sorted arrays`() {
         val a = listOf(1, 4)
         val b = listOf(2, 3)
         val expected = listOf(1, 2, 3, 4) to 2u
@@ -33,7 +33,7 @@ class CountingInversionsTest {
     }
 
     @Test
-    fun `should merge and count splitted for odd sorted arrays`() {
+    fun `should merge and count split for odd sorted arrays`() {
         val a = listOf(1, 4, 5)
         val b = listOf(2, 3)
         val expected = listOf(1, 2, 3, 4, 5) to 4u
@@ -42,7 +42,7 @@ class CountingInversionsTest {
     }
 
     @Test
-    fun `should merge and count splitted for odd sorted arrays - 02`() {
+    fun `should merge and count split for odd sorted arrays - 02`() {
         val a = listOf(1, 5)
         val b = listOf(2, 3, 4)
         val expected = listOf(1, 2, 3, 4, 5) to 3u

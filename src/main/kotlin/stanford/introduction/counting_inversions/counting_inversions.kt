@@ -27,7 +27,7 @@ internal fun sortAndCountInversions(a: List<Int>): Pair<List<Int>, UInt> {
 }
 
 /**
- * merges 2 sorted arrays into one and counts the number of spplited inversions
+ * merges 2 sorted arrays into one and counts the number of split inversions
  */
 internal fun mergeAndCountSplit(sortedLeftSide: List<Int>, sortedRightSide: List<Int>): Pair<List<Int>, UInt> {
     var i = 0
@@ -56,6 +56,6 @@ internal fun mergeAndCountSplit(sortedLeftSide: List<Int>, sortedRightSide: List
 
 internal fun split(a: List<Int>): Pair<List<Int>, List<Int>> {
     val size = if (a.size % 2 == 0) a.size / 2 else (a.size + 1) / 2
-    val splitted = a.chunked(size)
-    return splitted.first() to splitted.last()
+    val split = a.chunked(size)
+    return split.first() to split.last()
 }
