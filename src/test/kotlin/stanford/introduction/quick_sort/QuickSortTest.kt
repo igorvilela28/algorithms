@@ -10,7 +10,7 @@ internal class QuickSortTest {
     @Test
     fun `should choose mid pivot`() {
         val a = intArrayOf(8, 2, 4, 5, 7, 1)
-        val i = ChooseMidAsPivotStrategy.choosePivotPosition(
+        val i = ChooseMidAsPivotStrategy.choosePivotIndex(
             a, 0, 5
         )
         assertEquals(2, i)
@@ -19,7 +19,7 @@ internal class QuickSortTest {
     @Test
     fun `should choose mid pivot - 02`() {
         val a = intArrayOf(8, 2)
-        val i = ChooseMidAsPivotStrategy.choosePivotPosition(
+        val i = ChooseMidAsPivotStrategy.choosePivotIndex(
             a, 0, 1
         )
         assertEquals(0, i)
@@ -28,7 +28,7 @@ internal class QuickSortTest {
     @Test
     fun `should choose mid pivot - 03`() {
         val a = intArrayOf(8, 2, 5, 3, 1)
-        val i = ChooseMidAsPivotStrategy.choosePivotPosition(
+        val i = ChooseMidAsPivotStrategy.choosePivotIndex(
             a, 0, 4
         )
         assertEquals(2, i)
