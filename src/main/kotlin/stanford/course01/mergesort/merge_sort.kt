@@ -1,4 +1,4 @@
-package stanford.introduction.mergesort
+package stanford.course01.mergesort
 
 internal fun mergeSort() {
     // TODO

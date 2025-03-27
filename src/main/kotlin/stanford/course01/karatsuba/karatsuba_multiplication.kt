@@ -1,4 +1,4 @@
-package stanford.introduction.karatsuba
+package stanford.course01.karatsuba
 
 import java.math.BigInteger
 

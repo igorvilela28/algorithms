@@ -1,4 +1,4 @@
-package stanford.introduction.counting_inversions
+package stanford.course01.counting_inversions
 
 /**
  * Sorts A and return it and the number of inversions

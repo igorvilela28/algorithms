@@ -1,4 +1,4 @@
-package stanford.introduction.quick_sort
+package stanford.course01.quick_sort
 
 
 internal class QuickSort(private val choosePivotStrategy: ChoosePivotStrategy) {

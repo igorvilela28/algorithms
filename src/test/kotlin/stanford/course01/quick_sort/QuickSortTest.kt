@@ -1,4 +1,4 @@
-package stanford.introduction.quick_sort
+package stanford.course01.quick_sort
 
 import java.io.File
 import java.nio.file.Paths

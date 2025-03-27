@@ -1,4 +1,4 @@
-package stanford.introduction.counting_inversions
+package stanford.course01.counting_inversions
 
 import java.io.File
 import java.nio.file.Paths
