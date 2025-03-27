@@ -70,7 +70,7 @@ internal class QuickSortTest {
 
     private fun solveAssignment(strategy: ChoosePivotStrategy) {
         val path = Paths.get("").toAbsolutePath()
-            .toString() + "/src/main/kotlin/stanford/introduction/quick_sort/numbers.txt"
+            .toString() + "/src/main/kotlin/stanford/course01/quick_sort/numbers.txt"
         val file = File(path)
         val numbers = file.readLines().map { it.toInt() }.toIntArray()
         val quickSort = QuickSort(strategy)

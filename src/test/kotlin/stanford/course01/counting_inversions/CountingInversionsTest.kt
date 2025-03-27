@@ -76,7 +76,7 @@ class CountingInversionsTest {
     @Test
     fun `should count inversions from text file`() {
         val path = Paths.get("").toAbsolutePath()
-            .toString() + "/src/main/kotlin/stanford/introduction/counting_inversions/numbers.txt"
+            .toString() + "/src/main/kotlin/stanford/course01/counting_inversions/numbers.txt"
         val file = File(path)
         val numbers = file.readLines().map { it.toInt() }
         val result = sortAndCountInversions(numbers)
