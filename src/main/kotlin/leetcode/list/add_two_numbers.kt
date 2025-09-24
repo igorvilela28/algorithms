@@ -11,7 +11,7 @@ import kotlin.math.pow
  *     var next: ListNode? = null
  * }
  */
-private class Solution {
+private class Solution2 {
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
 
         //10 ^ 0 * 2

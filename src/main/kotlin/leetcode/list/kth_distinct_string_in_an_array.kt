@@ -2,7 +2,7 @@ package leetcode.list
 
 // https://leetcode.com/problems/kth-distinct-string-in-an-array/
 
-private class Solution {
+private class Solution3{
     fun kthDistinct(arr: Array<String>, k: Int): String {
         val distincts = mutableSetOf<String>()
         val repeatable = mutableSetOf<String>()

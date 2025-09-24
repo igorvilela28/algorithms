@@ -17,7 +17,7 @@ package leetcode.list
 //    var next: ListNode? = null
 //}
 
-private class Solution {
+private class Solution4 {
     fun middleNode(head: ListNode?): ListNode? {
         if (head == null) {
             return null
