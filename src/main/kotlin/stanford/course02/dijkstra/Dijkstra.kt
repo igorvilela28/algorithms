@@ -32,8 +32,10 @@ internal class Dijkstra(
             heap.add(edge)
         }
 
+        // O(M)
         while (!heap.isEmpty()) {
 
+            // O(logM)
             val edge = heap.poll()
 
             if (visited[edge.source - 1] && !visited[edge.destination - 1]) {
@@ -42,11 +44,14 @@ internal class Dijkstra(
                 val neighbors = graph[edge.destination] ?: emptyList()
                 for (neighbor in neighbors) {
                     if (!visited[neighbor.destination - 1]) {
+                        // O (logM)
                         heap.add(neighbor)
                     }
                 }
             }
         }
+
+        // => loop = O(M) * O(2 * logM) => O(M logM)
 
         return distances
     }
